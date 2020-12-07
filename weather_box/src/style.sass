@@ -1,0 +1,217 @@
+$text: #1F1F22
+$up_background: #F6D101
+$down_background: #C4A502
+$icon_black: #26231D
+$icon_yellow: #B89701
+
+
+*
+  // border: solid 1px black
+  position: relative
+  // border-radius: 2px
+  font-family:  'Muli', sans-serif, '微軟正黑體'
+  
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+html,body
+  +size(100%,100%)
+  margin: 0
+  padding: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $icon_black
+  
+label
+  cursor: pointer
+  
+.daybox
+  width: 50%
+  max-width: 310px
+  border-radius: 5px
+  overflow: hidden
+  box-shadow: 0px 0px 20px rgba(white,0.3)
+  cursor: pointer
+  
+  &:hover
+    .bottom
+      height: 100px
+    .dayweather
+      opacity: 1
+      top: 20px
+  
+  
+.top
+  height: 300px
+  background-color: $up_background
+  border-radius: 3px 3px 0px 0px
+  
+.rect
+  +size(150px,15px)
+  position: absolute
+  left: 83px
+  top: 85px
+  transform: translateY(-15px)
+  max-width: 300px
+  background-color: $icon_black
+  border-radius: 3px
+  animation: up_fogging 10s infinite
+  transition-duration: 1s
+    
+
+  
+ 
+@keyframes up_fogging
+  0%
+    +size(150px,15px)
+    opacity: 0
+  50%
+    +size(150px,150px)
+    opacity: 0.8
+  100%
+    +size(150px,15px)
+    opacity: 0
+  
+.text_area
+  position: absolute
+  display: inline-block
+  left: 20px
+  bottom: 10px
+  font-size: 15px
+  transform: translateY(-15px)
+  color: $text
+  transition: 0.5s
+  
+.up_infos
+  bottom: 220px
+  opacity: 0.8
+  transition-duration: 1s
+  
+.city
+  left: 180px
+  bottom: 20px
+  
+  
+.down_infos
+  top: 45px
+  transition: 1s
+  
+  
+.temperature
+  left: 230px
+  opacity: 0.8
+  transition: 1s
+  
+.weather
+  top: 24px
+  font-size: 30px
+    
+.bottom
+  height: 10px
+  display: flex
+  justify-content: center
+  font-size: 7px
+  background-color: $down_background
+  border-radius: 0px 0px 3px 3px
+  transition-duration: 1s
+  
+.dayweather
+  display: inline-block
+  width: calc(100% / 7 - 6px)
+  text-align: center
+  top: 60px
+  color: $text
+  opacity: 0
+  transition-duration: 1s
+  
+
+  
+  
+  
+  & svg
+    width: 80%
+    height: 30px
+    transform: translateY(8px)
+    
+    & .sun.sun1
+      fill: $up_background
+      // stroke: $icon_black
+      stroke-width: 5px
+      animation: sun1_move 12s infinite
+      
+    & .sun.sun2
+      fill: $icon_black
+      stroke: $icon_black
+      // stroke-width: 5px
+      animation: sun2_move 12s infinite
+      
+    & .rain
+        stroke: $up_background
+        stroke-width: 5px
+        animation: rain 2s infinite linear
+        transtion-duration: 0.5s
+        
+    & .rain.rain2
+        animation-delay: -0.4s
+        
+    & .rain.rain3
+        animation-delay: -0.7s
+        
+
+@keyframes rain
+  0%
+    transform: translateY(0px) 
+    opacity: 0
+  70%
+    opacity: 0.8
+  100%
+    transform: translateY(65px)
+    opacity: 0
+
+@keyframes sun1_move
+  0%
+    transform: translateX(0px) translateY(0px)
+  50%
+    transform: translateX(-10px) translateY(-10px)
+  100%
+    transform: translateX(0px) translateY(0px)
+  
+@keyframes sun2_move
+  0%
+    transform: translateX(0px) translateY(0px)
+  50%
+    transform: translateX(10px) translateY(10px)
+  100%
+    transform: translateX(0px) translateY(0px)
+       
+.dayweather:nth-child(1)
+  transition-delay: 0.2s
+.dayweather:nth-child(2)
+  transition-delay: 0.3s
+.dayweather:nth-child(3)
+  transition-delay: 0.4s
+.dayweather:nth-child(4)
+  transition-delay: 0.5s
+.dayweather:nth-child(5)
+  transition-delay: 0.6s
+.dayweather:nth-child(6)
+  transition-delay: 0.7s
+.dayweather:nth-child(7)
+  transition-delay: 0.8s
+  
+#switch_eclipse
+  display: none
+  
+#switch_eclipse:checked+.top
+  .temperature,.up_infos
+    opacity: 0
+    
+  
+
+    
+  
+    
+  

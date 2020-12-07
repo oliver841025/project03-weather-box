@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - weather_box_2</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans&amp;display=swap"rel="stylesheet'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Quicksand:wght@500&amp;display=swap"rel="stylesheet'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Muli:wght@700&amp;display=swap"rel="stylesheet'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="daybox">
+  <label>
+    <input id="switch_eclipse" type="checkbox"/>
+    <div class="top">
+      <div class="rect"></div>
+      <div class="text_area">
+        <div class="down_infos">
+          <div class="weather">Foggy</div>
+          <div class="temperature">18°C </div>
+        </div>
+        <div class="up_infos">
+          <div class="date">MON</div>
+          <div class="city">SILENT HILL</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="dayweather">MON
+        <svg class="fog" viewbox="-25 -25 100 100">
+          <rect x="0" y="0" width="50" height="15">
+            <animate attributeName="height" values="15;50;15" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s"></animate>
+            <animate attributeName="opacity" values="0;0.8;0" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s"></animate>
+          </rect>
+        </svg>
+      </div>
+      <div class="dayweather">TUE
+        <svg class="fog" viewbox="-25 -25 100 100">
+          <rect x="0" y="0" width="50" height="15">
+            <animate attributeName="height" values="15;50;15" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s"></animate>
+            <animate attributeName="opacity" values="0;0.8;0" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s"></animate>
+          </rect>
+        </svg>
+      </div>
+      <div class="dayweather">WED
+        <svg viewbox="-50 -50 100 100">
+          <circle class="sun sun1" cx="0" cy="0" r="22"></circle>
+          <circle class="sun sun2" cx="0" cy="0" r="22"></circle>
+        </svg>
+      </div>
+      <div class="dayweather">THU
+        <svg viewbox="-50 -50 100 100">
+          <circle class="sun sun1" cx="0" cy="0" r="22"></circle>
+          <circle class="sun sun2" cx="0" cy="0" r="22"></circle>
+        </svg>
+      </div>
+      <div class="dayweather">FRI
+        <svg class="fog" viewbox="-25 -25 100 100">
+          <rect x="0" y="0" width="50" height="15">
+            <animate attributeName="height" values="15;50;15" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s"></animate>
+            <animate attributeName="opacity" values="0;0.8;0" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s"></animate>
+          </rect>
+        </svg>
+      </div>
+      <div class="dayweather">SAT
+        <svg viewbox="-25 -25 100 100">
+          <line class="rain" x1="10" x2="10" y1="0" y2="20"></line>
+          <line class="rain rain2" x1="24" x2="24" y1="0" y2="20"></line>
+          <line class="rain rain3" x1="42" x2="42" y1="0" y2="20"></line>
+          <rect class="fog" x="0" y="0" width="50" height="15">
+            <animate attributeName="height" values="15;50;15" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s"></animate>
+            <animate attributeName="opacity" values="0;0.8;0" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s"></animate>
+          </rect>
+        </svg>
+      </div>
+      <div class="dayweather">SUN
+        <svg viewbox="-50 -50 100 100">
+          <circle class="sun sun1" cx="0" cy="0" r="22"></circle>
+          <circle class="sun sun2" cx="0" cy="0" r="22"></circle>
+        </svg>
+      </div>
+    </div>
+  </label>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

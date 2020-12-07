@@ -1,0 +1,55 @@
+.daybox
+  label
+    input#switch_eclipse(type="checkbox")
+    .top
+      .rect
+      .text_area
+        .down_infos
+          .weather Foggy
+          .temperature 18°C 
+        .up_infos
+          .date MON
+          .city SILENT HILL
+
+    .bottom
+      .dayweather MON
+        svg.fog(viewbox="-25 -25 100 100")
+          rect(x=0 y=0 width=50 height=15)
+            animate(attributeName="height" values="15;50;15" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s")
+            animate(attributeName="opacity" values="0;0.8;0" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s")
+      .dayweather TUE
+        svg.fog(viewbox="-25 -25 100 100")
+          rect(x=0 y=0 width=50 height=15)
+            animate(attributeName="height" values="15;50;15" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s")
+            animate(attributeName="opacity" values="0;0.8;0" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s")
+
+      .dayweather WED
+        svg(viewbox="-50 -50 100 100")
+          circle.sun.sun1(cx=0 cy=0 r=22)
+          circle.sun.sun2(cx=0 cy=0 r=22)
+      .dayweather THU
+        svg(viewbox="-50 -50 100 100")
+          circle.sun.sun1(cx=0 cy=0 r=22)
+          circle.sun.sun2(cx=0 cy=0 r=22)
+      .dayweather FRI
+        svg.fog(viewbox="-25 -25 100 100")
+          rect(x=0 y=0 width=50 height=15)
+            animate(attributeName="height" values="15;50;15" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s")
+            animate(attributeName="opacity" values="0;0.8;0" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s")
+      .dayweather SAT
+        svg(viewbox="-25 -25 100 100")
+          line.rain(x1=10 x2=10 y1=0 y2=20)
+          line.rain.rain2(x1=24 x2=24 y1=0 y2=20)
+          line.rain.rain3(x1=42 x2=42 y1=0 y2=20)
+
+          rect.fog(x=0 y=0 width=50 height=15)
+            animate(attributeName="height" values="15;50;15" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s")
+            animate(attributeName="opacity" values="0;0.8;0" keyTimes="0;0.5;1" repeatCount="indefinite" dur="10s")
+
+
+      .dayweather SUN
+        svg(viewbox="-50 -50 100 100")
+
+
+          circle.sun.sun1(cx=0 cy=0 r=22)
+          circle.sun.sun2(cx=0 cy=0 r=22)
